@@ -3,6 +3,7 @@ package geektime.spring.data.mybatisdemo.controller;
 
 import geektime.spring.data.mybatisdemo.controller.request.NewCoffeeRequest;
 import geektime.spring.data.mybatisdemo.model.Coffee;
+import geektime.spring.data.mybatisdemo.sequence.SnowflakeManager;
 import geektime.spring.data.mybatisdemo.service.CoffeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
@@ -30,17 +31,41 @@ import java.util.List;
 public class CoffeeController {
     @Autowired
     private CoffeeService coffeeService;
+    //注入
+    @Autowired
+    private SnowflakeManager snowflakeManager;
+    private long snowflakeID = 0;
 
     @PostMapping(path = "/", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public Coffee addCoffeeWithoutBindingResult(@Valid NewCoffeeRequest newCoffee) {
-        return coffeeService.saveCoffee(newCoffee.getName(), newCoffee.getPrice());
+
+        //全局唯一id
+
+        try{
+            snowflakeID = snowflakeManager.nextValue();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return coffeeService.saveCoffee(snowflakeID,newCoffee.getName(), newCoffee.getPrice());
     }
 
     @PostMapping(path = "/", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public Coffee addJsonCoffeeWithoutBindingResult(@Valid @RequestBody NewCoffeeRequest newCoffee) {
-        return coffeeService.saveCoffee(newCoffee.getName(), newCoffee.getPrice());
+
+        //全局唯一id
+        long snowflakeID = 0;
+        try{
+            snowflakeID = snowflakeManager.nextValue();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return coffeeService.saveCoffee(snowflakeID,newCoffee.getName(), newCoffee.getPrice());
     }
 
     @PostMapping(path = "/", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
@@ -57,7 +82,14 @@ public class CoffeeController {
                 while ((str = reader.readLine()) != null) {
                     String[] arr = StringUtils.split(str, " ");
                     if (arr != null && arr.length == 2) {
-                        coffees.add(coffeeService.saveCoffee(arr[0],
+                        //全局唯一id
+                        try{
+                            snowflakeID = snowflakeManager.nextValue();
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        coffees.add(coffeeService.saveCoffee(snowflakeID,arr[0],
                                 Money.of(CurrencyUnit.of("CNY"), 1)));
                     }
                 }

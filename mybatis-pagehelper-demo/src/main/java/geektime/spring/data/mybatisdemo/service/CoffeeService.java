@@ -27,8 +27,8 @@ public class CoffeeService {
 
     @Transactional(rollbackFor = Exception.class)
     @CacheEvict(value = {CacheConstants.MENU_DETAILS}, allEntries = true)
-    public Coffee saveCoffee(String name, Money price) {
-        return coffeeMapper.insert(Coffee.builder().name(name).price(price).build());
+    public Coffee saveCoffee(Long id,String name, Money price) {
+        return coffeeMapper.insert(Coffee.builder().id(id).name(name).price(price).build());
 
     }
     @Cacheable(value = CacheConstants.MENU_DETAILS, key = "'coffee_menu'", unless = "#result == null")
