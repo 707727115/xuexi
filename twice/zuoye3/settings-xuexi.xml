@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <!--<localRepository></localRepository>-->
+    <localRepository>D:\workspace_wshh\workspace_xuexi\xuexi\twice\zuoye3\xuexi-repository</localRepository>
+    
+    
+  <pluginGroups>
+  </pluginGroups>
+  <proxies>
+  </proxies>
+  <servers>
+<!--    <server>-->
+<!--      <id>nexus</id>-->
+<!--      <username>madp_user</username>-->
+<!--      <password>madp2020</password>-->
+<!--    </server>-->
+	  <server>
+		  <id>nexus</id>
+		  <username>admin</username>
+		  <password>m@dp2019nexuS</password>
+	  </server>
+  </servers>
+  <mirrors>
+     <!--<mirror>
+      
+    </mirror>-->
+  </mirrors>
+  <profiles>
+    <profile>  
+        <id>nexus</id>  
+        <repositories>  
+            <repository>  
+                <id>nexus</id>  
+                <url>http://nexus.madp.xyz/repository/maven-public/</url>
+                <releases>  
+                    <enabled>true</enabled>  
+                </releases>  
+                <snapshots>  
+                    <enabled>true</enabled>  
+                </snapshots>  
+            </repository>  
+        </repositories>
+		<pluginRepositories>
+			<pluginRepository>
+				<id>nexus</id>  
+                <url>http://nexus.madp.xyz/repository/maven-public/</url>
+			</pluginRepository>
+		</pluginRepositories>
+    </profile>
+  </profiles>
+   <activeProfiles>
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>  
+</settings>

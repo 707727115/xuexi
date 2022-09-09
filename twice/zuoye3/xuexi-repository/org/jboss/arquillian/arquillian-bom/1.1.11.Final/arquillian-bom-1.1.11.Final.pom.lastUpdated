@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Sep 10 01:00:00 CST 2022
+https\://repo.maven.apache.org/maven2/.lastUpdated=1662742800339
+a95fe73de2aba48e6cf8d8186c0edc5cb1dd4d42@default-nexus-http\://nexus.madp.xyz/repository/maven-public/.lastUpdated=1662742799679
+http\://nexus.madp.xyz/repository/maven-public/.error=Could not transfer artifact org.jboss.arquillian\:arquillian-bom\:pom\:1.1.11.Final from/to nexus (http\://nexus.madp.xyz/repository/maven-public/)\: Authorization failed for http\://nexus.madp.xyz/repository/maven-public/org/jboss/arquillian/arquillian-bom/1.1.11.Final/arquillian-bom-1.1.11.Final.pom 403 Forbidden

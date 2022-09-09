@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Sep 10 00:18:16 CST 2022
+https\://repo.maven.apache.org/maven2/.lastUpdated=1662740296266
+a95fe73de2aba48e6cf8d8186c0edc5cb1dd4d42@default-nexus-http\://nexus.madp.xyz/repository/maven-public/.lastUpdated=1662740295795
+http\://nexus.madp.xyz/repository/maven-public/.error=Could not transfer artifact log4j\:log4j\:pom\:1.2.12 from/to nexus (http\://nexus.madp.xyz/repository/maven-public/)\: Authorization failed for http\://nexus.madp.xyz/repository/maven-public/log4j/log4j/1.2.12/log4j-1.2.12.pom 403 Forbidden

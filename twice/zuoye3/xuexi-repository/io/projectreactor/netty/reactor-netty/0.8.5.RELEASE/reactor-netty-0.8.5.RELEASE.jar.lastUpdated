@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Sep 10 01:14:42 CST 2022
+a95fe73de2aba48e6cf8d8186c0edc5cb1dd4d42@default-nexus-http\://nexus.madp.xyz/repository/maven-public/.lastUpdated=1662743682707
+http\://nexus.madp.xyz/repository/maven-public/.error=Could not transfer artifact io.projectreactor.netty\:reactor-netty\:jar\:0.8.5.RELEASE from/to nexus (http\://nexus.madp.xyz/repository/maven-public/)\: Authorization failed for http\://nexus.madp.xyz/repository/maven-public/io/projectreactor/netty/reactor-netty/0.8.5.RELEASE/reactor-netty-0.8.5.RELEASE.jar 403 Forbidden

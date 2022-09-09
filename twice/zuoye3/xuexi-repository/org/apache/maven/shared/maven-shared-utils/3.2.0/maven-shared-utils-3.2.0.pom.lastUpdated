@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Sep 10 01:15:08 CST 2022
+https\://repo.maven.apache.org/maven2/.lastUpdated=1662743708194
+a95fe73de2aba48e6cf8d8186c0edc5cb1dd4d42@default-nexus-http\://nexus.madp.xyz/repository/maven-public/.lastUpdated=1662743707376
+http\://nexus.madp.xyz/repository/maven-public/.error=Could not transfer artifact org.apache.maven.shared\:maven-shared-utils\:pom\:3.2.0 from/to nexus (http\://nexus.madp.xyz/repository/maven-public/)\: Authorization failed for http\://nexus.madp.xyz/repository/maven-public/org/apache/maven/shared/maven-shared-utils/3.2.0/maven-shared-utils-3.2.0.pom 403 Forbidden

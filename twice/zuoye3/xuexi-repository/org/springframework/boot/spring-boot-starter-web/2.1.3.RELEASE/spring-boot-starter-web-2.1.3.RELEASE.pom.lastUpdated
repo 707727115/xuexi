@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Sep 10 00:59:08 CST 2022
+https\://repo.maven.apache.org/maven2/.lastUpdated=1662742748180
+a95fe73de2aba48e6cf8d8186c0edc5cb1dd4d42@default-nexus-http\://nexus.madp.xyz/repository/maven-public/.lastUpdated=1662742747068
+http\://nexus.madp.xyz/repository/maven-public/.error=Could not transfer artifact org.springframework.boot\:spring-boot-starter-web\:pom\:2.1.3.RELEASE from/to nexus (http\://nexus.madp.xyz/repository/maven-public/)\: Authorization failed for http\://nexus.madp.xyz/repository/maven-public/org/springframework/boot/spring-boot-starter-web/2.1.3.RELEASE/spring-boot-starter-web-2.1.3.RELEASE.pom 403 Forbidden

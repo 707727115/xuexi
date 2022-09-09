@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Sep 10 01:13:48 CST 2022
+https\://repo.maven.apache.org/maven2/.lastUpdated=1662743628762
+a95fe73de2aba48e6cf8d8186c0edc5cb1dd4d42@default-nexus-http\://nexus.madp.xyz/repository/maven-public/.lastUpdated=1662742980168
+http\://nexus.madp.xyz/repository/maven-public/.error=Could not transfer artifact javax.activation\:javax.activation-api\:jar\:1.2.0 from/to nexus (http\://nexus.madp.xyz/repository/maven-public/)\: Authorization failed for http\://nexus.madp.xyz/repository/maven-public/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar 403 Forbidden

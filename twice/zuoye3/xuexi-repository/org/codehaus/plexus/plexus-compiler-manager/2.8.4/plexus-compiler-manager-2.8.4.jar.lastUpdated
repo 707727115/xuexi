@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Sep 10 01:23:40 CST 2022
+https\://repo.maven.apache.org/maven2/.lastUpdated=1662744220761
+a95fe73de2aba48e6cf8d8186c0edc5cb1dd4d42@default-nexus-http\://nexus.madp.xyz/repository/maven-public/.lastUpdated=1662744199061
+http\://nexus.madp.xyz/repository/maven-public/.error=Could not transfer artifact org.codehaus.plexus\:plexus-compiler-manager\:jar\:2.8.4 from/to nexus (http\://nexus.madp.xyz/repository/maven-public/)\: Authorization failed for http\://nexus.madp.xyz/repository/maven-public/org/codehaus/plexus/plexus-compiler-manager/2.8.4/plexus-compiler-manager-2.8.4.jar 403 Forbidden
