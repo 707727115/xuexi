@@ -1,0 +1,14 @@
+1. 写代码实现 Spring Bean的装配，方式越多越好（XML、Annotation 都可以）【简单】
+CoffeeService中装配coffeeRepository：@Resource/@Autowired
+ MoneyReadConverter使用的@Component
+DataSourceDemo 的@Configuration 用于读取配置文件
+bean.xml或logback.xml用xml形式配置bean
+2.通过springmvc实现两个restful查询数据接口：第一个返回json数据格式，第二个返回xml数据格式（可通过改造第一次作业的springbuck项目实现）【正常】
+改造springbuck项目
+查询Coffee返回的json数据
+查询CoffeeOrder时添加了@XmlRootElement 返回xml数据
+3.新建一个Springboot项目，通过远程调用方式访问作业2提供的web接口，访问方式越多越好。【较难9】
+使用Springboot提供的RestTemplate
+使用springboot提供的webclient
+使用okhttp  写了一个工具类OkHttpClient
+使用apache common封装好的HttpClient:写了一个工具类HttpClientUtil
