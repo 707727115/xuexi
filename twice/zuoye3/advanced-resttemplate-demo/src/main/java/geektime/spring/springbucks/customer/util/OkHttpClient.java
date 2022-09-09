@@ -1,24 +1,33 @@
 package geektime.spring.springbucks.customer.util;
 
+import lombok.extern.slf4j.Slf4j;
+import okhttp3.*;
+import org.springframework.util.CollectionUtils;
+
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+@Slf4j
 public class OkHttpClient {
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
     private volatile static okhttp3.OkHttpClient client;
+//不从配置文件读了
+//    private static final int MAX_IDLE_CONNECTION = Integer
+//            .parseInt(ConfigManager.get("httpclient.max_idle_connection"));
+    private static final int MAX_IDLE_CONNECTION = 20;
 
-    private static final int MAX_IDLE_CONNECTION = Integer
-            .parseInt(ConfigManager.get("httpclient.max_idle_connection"));
+//    private static final long KEEP_ALIVE_DURATION = Long
+//            .parseLong(ConfigManager.get("httpclient.keep_alive_duration"));
+    private static final long KEEP_ALIVE_DURATION = 1;
 
-    private static final long KEEP_ALIVE_DURATION = Long
-            .parseLong(ConfigManager.get("httpclient.keep_alive_duration"));
+//    private static final long CONNECT_TIMEOUT = Long.parseLong(ConfigManager.get("httpclient.connectTimeout"));
+    private static final long CONNECT_TIMEOUT = 3000;
 
-    private static final long CONNECT_TIMEOUT = Long.parseLong(ConfigManager.get("httpclient.connectTimeout"));
-
-    private static final long READ_TIMEOUT = Long.parseLong(ConfigManager.get("httpclient. "));
+//    private static final long READ_TIMEOUT = Long.parseLong(ConfigManager.get("httpclient. "));
+    private static final long READ_TIMEOUT = 3000;
 
     /**
      * 单例模式(双重检查模式) 获取类实例

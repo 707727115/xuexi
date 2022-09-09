@@ -1,6 +1,12 @@
 package geektime.spring.springbucks.customer.util;
 
-import sun.net.www.http.HttpClient;
+
+
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.httpclient.*;
+import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.httpclient.params.HttpMethodParams;
 
 import java.io.IOException;
 
